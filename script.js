@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Visit to Asha kiran founation",
-      desc: "Motivating students with life values & career direction.",
-      img: "img15.jpg",
-      link: "event2.html"
+      desc: "Health awareness and distribution activity conducted for young students..",
+      img: "img3.jpg",
+      link: "event3.html"
     }
   ];
 
@@ -169,4 +169,5 @@ const countObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 countItems.forEach(item => countObserver.observe(item));
+
 
