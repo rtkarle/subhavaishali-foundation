@@ -17,7 +17,7 @@ function startPayment(){
   }
 
   var options={
-    "key":"rzp_test_123456789",
+    "key":"rzp_test_RhX35z3NVonnlG",
     "amount":amount * 100,
     "currency":"INR",
     "name":"Subhvaishali Foundation",
@@ -34,3 +34,4 @@ function startPayment(){
   var rzp=new Razorpay(options);
   rzp.open();
 }
+
