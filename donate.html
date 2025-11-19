@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate — Subhvaishali Foundation</title>
+<link rel="stylesheet" href="donate.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="donate.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="nav-container">
+      <div class="logo">Subhvaishali</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activities.html">Our Stories</a>
+        <a href="impact.html">Impact</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donate.html" class="btn-nav active">Donate</a>
+      </nav>
+  </div>
+</header>
+
+
+<!-- ================== HERO ================== -->
+<section class="donate-hero">
+   <h1>Your Support Creates Real Change</h1>
+   <p>Every contribution directly helps tribal children, rural families and community development.</p>
+</section>
+
+
+<!-- ================== IMPACT CARDS ================== -->
+<section class="donate-impact">
+   <div class="impact-card">
+      <h2>📘 Education</h2>
+      <p>School kits, books & academic support.</p>
+   </div>
+
+   <div class="impact-card">
+      <h2>❤️ Healthcare</h2>
+      <p>Medical camps, medicines & health awareness.</p>
+   </div>
+
+   <div class="impact-card">
+      <h2>🌱 Environment</h2>
+      <p>Tree plantation & eco-friendly initiatives.</p>
+   </div>
+
+   <div class="impact-card">
+      <h2>👨‍👩‍👧 Community</h2>
+      <p>Village upliftment & value-based development.</p>
+   </div>
+</section>
+
+
+<!-- ================== DONATION OPTIONS ================== -->
+<section class="donate-options">
+
+   <div class="donate-left">
+      <h2>Choose Your Way to Donate</h2>
+
+      <ul>
+         <li>✔ 100% Transparent</li>
+         <li>✔ Instant Receipt</li>
+         <li>✔ Certificate for Supporters</li>
+      </ul>
+
+      <button class="open-donate-btn" onclick="openForm()">Donate Online</button>
+
+      <h3>Or Scan & Pay</h3>
+      <img src="qr.png" class="qr-img">
+   </div>
+
+   <div class="donate-right">
+      <img src="donate.jpg">
+   </div>
+
+</section>
+
+
+<!-- ================== CERTIFICATE SECTION ================== -->
+<section class="cert-section">
+   <div class="cert-text">
+      <h2>🎖 Certificate of Appreciation</h2>
+      <p>Your first donation qualifies you for an official certificate from Subhvaishali Foundation.</p>
+   </div>
+
+   <div class="cert-img">
+      <img src="certificate-preview.png">
+   </div>
+</section>
+<!-- DONATION FORM (PREMIUM POPUP) -->
+<div id="donationFormBox" class="donation-popup">
+
+   <div class="donation-card">
+
+        <span class="close-btn" onclick="closeForm()">✕</span>
+
+        <h2 class="popup-title">Complete Your Donation</h2>
+        <p class="popup-subtitle">Your support helps us change lives ❤️</p>
+
+        <div class="popup-fields">
+
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+            </div>
+
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+            </div>
+
+            <div class="field">
+                <label>Donation Amount (₹)</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+            </div>
+
+        </div>
+
+        <button class="donate-btn" onclick="startPayment()">Proceed to Pay →</button>
+
+   </div>
+
+</div>
+
+
+
+<!-- ================== FOOTER ================== -->
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h3>Subhvaishali Foundation</h3>
+      <p>Working to uplift tribal and underserved communities through compassion, service and empowerment.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="activities.html">Our Stories</a>
+      <a href="impact.html">impact</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="donate.html">Donate</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: subhvaishalifoundation@gmail.com</p>
+      <p>Phone: +91 8237917354</p>
+      <p>Mumbai, Maharashtra</p>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">© 2025 Subhvaishali Foundation — All Rights Reserved.</p>
+</footer>
+</body>
+</html>
