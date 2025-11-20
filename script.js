@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Creating Change, One Life at a Time",
       desc: "Empowering tribal communities through education, healthcare, livelihood and environmental action.",
-      img: "hero.jpg",
+      img: "hero1.jpg",
       link: "about.html"
     },
     {
@@ -169,5 +169,6 @@ const countObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 countItems.forEach(item => countObserver.observe(item));
+
 
 
