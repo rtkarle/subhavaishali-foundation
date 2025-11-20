@@ -31,6 +31,12 @@
   align-items: center;
 }
 
+/* NAV WRAPPER */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 /* LOGO */
 .logo {
   font-size: 32px;
@@ -175,8 +181,8 @@
 }
 
 .ah-img img {
-  width: 380px;
-  height: 420px;
+  width: min(380px, 100%);
+  height: auto;
   object-fit: cover;
   border-radius: 22px;
 
@@ -215,7 +221,6 @@
 
   .ah-img img {
     width: 75%;
-    height: auto;
   }
 }
 
@@ -411,8 +416,8 @@
 
 /* Founder Image */
 .founder-img img {
-  width: 360px;
-  height: 420px;
+  width: min(360px, 100%);
+  height: auto;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(255,100,0,0.25);
@@ -476,7 +481,6 @@
 
   .founder-img img {
     width: 280px;
-    height: 330px;
   }
 
   .founder-text {
@@ -495,27 +499,6 @@
 }
 
 
-
-
-/* VALUES */
-.values-section{
-  max-width:1100px;margin:70px auto;text-align:center;padding:0 20px;
-}
-.values-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:18px;margin-top:20px;
-}
-.value-card{
-  background:linear-gradient(160deg,#fff,#fef4e8);
-  padding:18px;border-radius:16px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.08);
-  font-weight:700;font-size:16px;
-  color:#222;transition:0.4s;
-}
-.value-card:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 20px 40px rgba(0,0,0,0.12);
-}
 /* ----------------------------------------------------
    MISSION & VISION — Premium Animated Section
 ---------------------------------------------------- */
@@ -616,6 +599,8 @@
     gap: 25px;
   }
 }
+
+
 /* ----------------------------------------------------
    CORE VALUES — Premium Animated Section
 ---------------------------------------------------- */
@@ -710,6 +695,7 @@
   0% { transform: translate(-18%, -18%); }
   100% { transform: translate(18%, 18%); }
 }
+
 
 /* ----------------------------------------------------
    JOURNEY TIMELINE — Premium Design
@@ -820,6 +806,7 @@
   }
 }
 
+
 /* ----------------------------------------------------
    GLOBAL SCROLL REVEAL ANIMATION (Premium)
 ---------------------------------------------------- */
@@ -858,6 +845,8 @@
 .reveal-down.visible {
   transform: translate(0,0);
 }
+
+
 /* ----------------------------------------------------
    CONTACT SECTION (Premium)
 ---------------------------------------------------- */
@@ -968,6 +957,8 @@
     text-align:center;
   }
 }
+
+
 /* ----------------------------------------------------
    FOOTER
 ---------------------------------------------------- */
@@ -1041,5 +1032,53 @@
 
   .footer-about p{
     margin:auto;
+  }
+}
+
+
+/* ----------------------------------------------------
+   EXTRA: HEADER / NAV RESPONSIVE FIX
+---------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 16px;
+    font-size: 14px;
+  }
+
+  .btn-nav {
+    margin-left: 0;
+    margin-top: 6px;
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    align-items: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .header {
+    padding: 10px 0;
   }
 }
