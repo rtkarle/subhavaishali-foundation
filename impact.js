@@ -1,3 +1,10 @@
+// MOBILE MENU TOGGLE
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+});
 // SCROLL REVEAL
 const reveals = document.querySelectorAll('.reveal');
 const revealOnScroll = () => {

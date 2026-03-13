@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://subhvaishalifoundation.org.in/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://subhvaishalifoundation.org.in/donate.html</loc>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://subhvaishalifoundation.org.in/donate.php</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://subhvaishalifoundation.org.in/about.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://subhvaishalifoundation.org.in/activities.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://subhvaishalifoundation.org.in/impact.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Events -->
+    <url><loc>https://subhvaishalifoundation.org.in/event1.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event2.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event3.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event4.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event5.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event6.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event7.html</loc></url>
+    <url><loc>https://subhvaishalifoundation.org.in/event8.html</loc></url>
+
+</urlset>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Certificate of Donation</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Full certificate wrapper */
+.certificate {
+    width: 1120px;
+    height: 793px;
+    margin: 20px auto;
+    background: url("certificate.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: 'Georgia', serif;
+    color: #4c2f00;
+}
+
+/* Main Title */
+.title {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    color: #4d3500;
+}
+
+/* Subtext — Company */
+.company {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Recipient Name */
+.recipient {
+    position: absolute;
+    top: 340px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #4d3500;
+}
+
+/* Donation message */
+.message {
+    position: absolute;
+    top: 410px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Amount */
+.amount {
+    position: absolute;
+    top: 465px;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Date */
+.date {
+    position: absolute;
+    top: 520px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="certificate">
+
+    <div class="title">Certification of Donation</div>
+
+    <div class="company">On behalf of <b>Subhvaishali Foundation</b></div>
+
+    <div class="recipient" id="name"></div>
+
+    <div class="message">
+        In recognition of your donation and support.
+    </div>
+
+    <div class="amount" id="amt"></div>
+
+    <div class="date" id="date"></div>
+
+</div>
+
+<script>
+let url = new URL(window.location.href);
+
+document.getElementById("name").innerHTML =
+    url.searchParams.get("name") || "[Recipient Name]";
+
+document.getElementById("amt").innerHTML =
+    "Amount Donated: ₹" + (url.searchParams.get("amount") || "0");
+
+document.getElementById("date").innerHTML =
+    "Awarded on " + new Date().toLocaleDateString();
+</script>
+
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 /* ----------------------------------------------------
    GLOBAL STYLES
 ---------------------------------------------------- */
@@ -19,86 +21,100 @@ body{
 /* -----------------------------------
    HEADER (Premium Glass Navbar)
 ------------------------------------*/
-.header {
+header{
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 14px 0;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 138, 58, 0.2);
-  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-  z-index: 1000;
-  animation: navFade 0.9s ease;
+  background: white;
+  padding: 12px 0;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  z-index: 999;
 }
 
-@keyframes navFade {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.nav-container {
+.nav-container{
   max-width: 1150px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-/* LOGO */
 .logo {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 900;
-  letter-spacing: -1px;
-  background: linear-gradient(90deg,#ff6a00,#ff944d);
+  background: linear-gradient(90deg,#ff6a00,#ff9440);
   -webkit-background-clip: text;
   color: transparent;
-  cursor: pointer;
-  transition: 0.3s ease;
 }
-
-.logo:hover { transform: scale(1.05); }
-
-/* NAVIGATION */
-.nav a {
+/* LOGO */
+.logo-box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+}
+
+/* FIXED LOGO SIZE – will NEVER stretch */
+.logo-img{
+  width: 100px;      /* MAIN FIX */
+  height: 100px;     /* MAIN FIX */
+  object-fit: contain; 
+  display: block;
+}
+
+/* LOGO TEXT */
+.logo-text{
+  font-size: 26px;
+  font-weight: 900;
+  background: linear-gradient(90deg,#ff6a00,#ff9440);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* NAV */
+.nav a{
   margin-left: 20px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #333;
-  transition: 0.3s ease;
-}
-
-.nav a:hover,
-.nav a.active {
-  color: #ff6a00;
-}
-
-/* DONATE BUTTON */
-.btn-nav {
-  background: linear-gradient(90deg,#ff6a00,#ff944d);
-  padding: 8px 18px;
-  border-radius: 8px;
-  color: #fff !important;
   font-weight: 700;
-  box-shadow: 0 8px 18px rgba(255, 106, 0, 0.35);
+  color: #ff6a00;
+  text-decoration: none;
 }
 
-.btn-nav:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.45);
+/* Buttons */
+.btn-nav{
+  border: 2px solid #ff6a00;
+  padding: 8px 14px;
+  border-radius: 6px;
 }
 
-/* MOBILE MENU ICON */
+.btn-nav:hover{
+  background: #ff6a00;
+  color: white;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+  .nav{
+    display: none;
+  }
+  .logo-img{
+    width: 45px;
+    height: 45px;
+  }
+}
+/* ----------------------------------------------------
+   MOBILE MENU BUTTON
+---------------------------------------------------- */
 .menu-icon {
   display: none;
-  font-size: 26px;
-  cursor: pointer;
+  font-size: 32px;
   color: #ff6a00;
+  cursor: pointer;
+  font-weight: 900;
 }
 
-/* MOBILE NAVIGATION */
+/* ----------------------------------------------------
+   MOBILE NAVIGATION
+---------------------------------------------------- */
 @media(max-width: 850px) {
 
   .menu-icon {
@@ -106,31 +122,51 @@ body{
   }
 
   .nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
+    position: fixed;
+    top: 80px;
+    right: -260px;
+    width: 240px;
+    height: 100vh;
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
-    width: 220px;
-    transform: translateX(100%);
-    transition: 0.3s ease;
-    padding: 25px 0;
-    border-bottom-left-radius: 18px;
-    box-shadow: -5px 12px 20px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    padding: 25px;
+    gap: 18px;
+    box-shadow: -4px 0 18px rgba(0,0,0,0.12);
+    border-left: 3px solid #ff6a00;
+    transition: 0.35s ease;
+    z-index: 999999;
   }
 
+  /* When menu is opened */
+  .nav.show {
+    right: 0;
+  }
+
+  /* Mobile nav links */
   .nav a {
     margin: 0;
-    text-align: center;
     padding: 10px 0;
-    font-size: 17px;
+    text-align: left;
+    color: #ff6a00;
+    font-size: 18px;
+    font-weight: 700;
   }
 
-  .nav.show {
-    transform: translateX(0);
+  .btn-nav {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* Hide desktop nav */
+  .nav-container nav {
+    display: none;
+  }
+
+  /* Show our custom nav */
+  #mobileMenu {
+    display: flex;
   }
 }
 

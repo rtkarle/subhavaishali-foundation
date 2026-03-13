@@ -1,4 +1,12 @@
 
+// MOBILE MENU TOGGLE
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+});
+
 /* ----------------------------------------------------
    REVEAL ANIMATIONS
 ---------------------------------------------------- */
@@ -169,6 +177,5 @@ const countObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 countItems.forEach(item => countObserver.observe(item));
-
 
 
